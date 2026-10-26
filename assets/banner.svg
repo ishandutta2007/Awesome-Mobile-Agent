@@ -1,0 +1,237 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="75%">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="50%" stop-color="#0a0e1a" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+
+    <radialGradient id="glowCyan" cx="20%" cy="30%" r="35%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glowPurple" cx="80%" cy="70%" r="40%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glowBlue" cx="50%" cy="50%" r="45%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Linear Gradients -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="35%" stop-color="#818cf8" />
+      <stop offset="70%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0.8" />
+    </linearGradient>
+
+    <linearGradient id="phoneBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      @keyframes pulseGrid {
+        0%, 100% { opacity: 0.12; }
+        50% { opacity: 0.28; }
+      }
+      @keyframes floatSoft1 {
+        0%, 100% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(-7px) scale(1.02); }
+      }
+      @keyframes floatSoft2 {
+        0%, 100% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(8px) scale(0.98); }
+      }
+      @keyframes scanPulse {
+        0% { r: 12px; opacity: 0.9; }
+        100% { r: 52px; opacity: 0; }
+      }
+      @keyframes beamFlow {
+        0% { stroke-dashoffset: 400; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes shimmerBorder {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: 200; }
+      }
+
+      .grid-lines { animation: pulseGrid 6s ease-in-out infinite; }
+      .floating-pill-1 { animation: floatSoft1 4.5s ease-in-out infinite; transform-origin: center; }
+      .floating-pill-2 { animation: floatSoft2 5.2s ease-in-out infinite; transform-origin: center; }
+      .radar-wave-1 { animation: scanPulse 2.8s cubic-bezier(0.2, 0.8, 0.4, 1) infinite; }
+      .radar-wave-2 { animation: scanPulse 2.8s cubic-bezier(0.2, 0.8, 0.4, 1) 1.4s infinite; }
+      .data-stream {
+        stroke-dasharray: 20, 15;
+        animation: beamFlow 10s linear infinite;
+      }
+      .shimmer-rect {
+        stroke-dasharray: 60, 30;
+        animation: shimmerBorder 8s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Deep Canvas Background -->
+  <rect width="1200" height="360" fill="url(#bgGrad)" />
+
+  <!-- Dynamic Radial Glow Ambient Blobs -->
+  <circle cx="240" cy="120" r="280" fill="url(#glowCyan)" />
+  <circle cx="980" cy="240" r="320" fill="url(#glowPurple)" />
+  <circle cx="600" cy="180" r="300" fill="url(#glowBlue)" />
+
+  <!-- Animated Tech Grid Layer -->
+  <g class="grid-lines" stroke="#38bdf8" stroke-width="0.75">
+    <line x1="80" y1="0" x2="80" y2="360" />
+    <line x1="180" y1="0" x2="180" y2="360" />
+    <line x1="280" y1="0" x2="280" y2="360" />
+    <line x1="380" y1="0" x2="380" y2="360" />
+    <line x1="480" y1="0" x2="480" y2="360" />
+    <line x1="580" y1="0" x2="580" y2="360" />
+    <line x1="680" y1="0" x2="680" y2="360" />
+    <line x1="780" y1="0" x2="780" y2="360" />
+    <line x1="880" y1="0" x2="880" y2="360" />
+    <line x1="980" y1="0" x2="980" y2="360" />
+    <line x1="1080" y1="0" x2="1080" y2="360" />
+
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+  </g>
+
+  <!-- Connecting Data Stream Flow Lines -->
+  <g fill="none" stroke-width="1.8" opacity="0.45">
+    <path class="data-stream" stroke="#06b6d4" d="M 60,300 C 180,260 220,100 360,110 S 520,280 680,240 S 960,60 1140,90" />
+    <path class="data-stream" stroke="#a855f7" d="M 60,80 C 220,90 280,280 440,260 S 760,100 920,130 S 1080,290 1160,260" />
+  </g>
+
+  <!-- Dynamic Left Tech Element: Mobile Device Mockup with Radar -->
+  <g transform="translate(70, 75)">
+    <!-- Radar Node -->
+    <circle cx="55" cy="100" r="10" fill="#0284c7" opacity="0.4" />
+    <circle class="radar-wave-1" cx="55" cy="100" r="15" fill="none" stroke="#38bdf8" stroke-width="1.8" />
+    <circle class="radar-wave-2" cx="55" cy="100" r="15" fill="none" stroke="#818cf8" stroke-width="1.8" />
+
+    <!-- Smartphone Frame -->
+    <rect x="15" y="10" width="80" height="155" rx="16" fill="#0f172a" stroke="url(#phoneBorder)" stroke-width="2.5" />
+    <!-- Screen -->
+    <rect x="22" y="24" width="66" height="125" rx="8" fill="#1e293b" opacity="0.9" />
+    <!-- Screen UI Bars -->
+    <rect x="28" y="34" width="40" height="5" rx="2.5" fill="#38bdf8" />
+    <rect x="28" y="44" width="54" height="4" rx="2" fill="#64748b" />
+    <rect x="28" y="52" width="48" height="4" rx="2" fill="#64748b" />
+    <!-- Agent Heartbeat / Activity Graph -->
+    <path d="M 28,84 L 38,84 L 44,70 L 50,95 L 56,80 L 62,84 L 76,84" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="50" cy="95" r="3" fill="#22c55e" />
+    <!-- Notch / Home bar -->
+    <rect x="42" y="16" width="26" height="3" rx="1.5" fill="#64748b" />
+    <rect x="44" y="142" width="22" height="2" rx="1" fill="#94a3b8" />
+  </g>
+
+  <!-- Dynamic Right Tech Element: Shield & Security Nodes -->
+  <g transform="translate(1030, 80)">
+    <!-- Shield Outline -->
+    <path d="M 50,15 L 90,32 C 90,82 50,122 50,122 C 50,122 10,82 10,32 Z" fill="#0f172a" stroke="url(#borderGrad)" stroke-width="2.5" />
+    <!-- Inner Shield Accent -->
+    <path d="M 50,28 L 78,41 C 78,78 50,108 50,108 C 50,108 22,78 22,41 Z" fill="#1e293b" opacity="0.8" />
+    <!-- Checkmark / Lock icon in shield -->
+    <path d="M 38,65 L 47,74 L 64,53" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Satellite Security Nodes -->
+    <circle cx="10" cy="20" r="5" fill="#a855f7" />
+    <circle cx="95" cy="100" r="4" fill="#38bdf8" />
+    <line x1="50" y1="15" x2="10" y2="20" stroke="#a855f7" stroke-width="1.2" stroke-dasharray="3,3" />
+    <line x1="90" y1="32" x2="95" y2="100" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="3,3" />
+  </g>
+
+  <!-- Ambient Dynamic Floating Badges in Background (Outer area) -->
+  <g class="floating-pill-1" transform="translate(200, 42)">
+    <rect width="135" height="28" rx="14" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.2" opacity="0.85" />
+    <text x="67" y="18" fill="#a5b4fc" font-size="11" font-weight="600" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">📡 FIELD AGENT RT</text>
+  </g>
+
+  <g class="floating-pill-2" transform="translate(860, 40)">
+    <rect width="145" height="28" rx="14" fill="#042f2e" stroke="#14b8a6" stroke-width="1.2" opacity="0.85" />
+    <text x="72" y="18" fill="#5eead4" font-size="11" font-weight="600" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">🔒 ZERO TRUST UEM</text>
+  </g>
+
+  <!-- Central High-Contrast Glass Card (Guarantees Title & Subtitle Stay Clear in Foreground) -->
+  <g transform="translate(210, 52)" filter="url(#cardShadow)">
+    <rect width="780" height="248" rx="20" fill="url(#cardGrad)" stroke="url(#borderGrad)" stroke-width="1.8" />
+    <!-- Inner Accent Shimmer Border -->
+    <rect class="shimmer-rect" x="3" y="3" width="774" height="242" rx="18" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.4" />
+
+    <!-- Top Badge Header inside Card -->
+    <g transform="translate(260, 22)">
+      <rect width="260" height="26" rx="13" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2" />
+      <circle cx="16" cy="13" r="4.5" fill="#10b981" />
+      <text x="135" y="17" fill="#e2e8f0" font-size="11" font-weight="700" letter-spacing="1.2" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">CURATED ECOSYSTEM DIRECTORY</text>
+    </g>
+
+    <!-- Main Title (Crisp, High Contrast, Gradient Fill) -->
+    <text x="390" y="105" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="44" letter-spacing="-0.5" fill="url(#titleGrad)">
+      AWESOME MOBILE AGENT
+    </text>
+
+    <!-- Subtitle (Clear, Highly Legible Foreground Text) -->
+    <text x="390" y="145" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="500" font-size="15.5" fill="#f1f5f9" letter-spacing="0.2">
+      Unified Endpoint Management • Mobile Security • Autonomous OS Agents
+    </text>
+
+    <!-- Secondary Meta Description -->
+    <text x="390" y="173" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="400" font-size="13" fill="#94a3b8">
+      Top Enterprise SaaS Solutions &amp; Sovereign Open-Source Projects for Modern Device Fleets
+    </text>
+
+    <!-- Feature Pillars Badges in Foreground Card -->
+    <g transform="translate(65, 198)">
+      <!-- Pill 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="145" height="30" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+        <text x="72" y="19" fill="#38bdf8" font-size="11.5" font-weight="700" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">📱 Multi-OS MDM</text>
+      </g>
+      <!-- Pill 2 -->
+      <g transform="translate(165, 0)">
+        <rect width="155" height="30" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+        <text x="77" y="19" fill="#a78bfa" font-size="11.5" font-weight="700" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">🛡️ Zero-Trust Access</text>
+      </g>
+      <!-- Pill 3 -->
+      <g transform="translate(340, 0)">
+        <rect width="145" height="30" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+        <text x="72" y="19" fill="#34d399" font-size="11.5" font-weight="700" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">🤖 Mobile AI Agents</text>
+      </g>
+      <!-- Pill 4 -->
+      <g transform="translate(505, 0)">
+        <rect width="145" height="30" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+        <text x="72" y="19" fill="#f472b6" font-size="11.5" font-weight="700" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">⚡ Field Operations</text>
+      </g>
+    </g>
+  </g>
+</svg>
